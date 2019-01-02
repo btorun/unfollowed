@@ -1,0 +1,48 @@
+buildscript { repositories { jcenter() } }
+plugins {
+    id 'java'
+    id 'nebula.lint' version '10.4.0'
+}
+
+group 'com.baturalptorun.lambda'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.twitter4j:twitter4j-core:4.0.7'
+    compile 'com.amazonaws:aws-java-sdk-core:1.11.475'
+    compile 'com.amazonaws:aws-java-sdk-s3:1.11.475'
+    compile 'com.amazonaws:aws-lambda-java-core:1.2.0'
+    compile 'com.google.inject:guice:4.2.2'
+    compile 'com.google.code.gson:gson:2.8.5'
+    compile 'com.google.guava:guava:27.0.1-jre'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    runtime 'ch.qos.logback:logback-core:1.0.13'
+    runtime 'ch.qos.logback:logback-classic:1.0.13'
+}
+
+wrapper {
+    gradleVersion = '5.0'
+}
+
+gradleLint {
+    rules  = ['dependency-parentheses']
+    criticalRules = ['unused-dependency']
+}
+
+task buildCode(type: Zip) {
+    baseName = "unfollowed"
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtime
+    }
+}
+
+build.dependsOn buildCode
