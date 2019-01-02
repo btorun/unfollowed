@@ -1,5 +1,5 @@
 # unfollowed
-
+[![Build Status](https://api.travis-ci.org/btorun/unfollowed.svg?branch=master)](https://travis-ci.org/btorun/unfollowed)
 ## Introduction
 _unfollowed_ runs on AWS Lambda and sends a direct message to authenticated user on Twitter if anyone unfollowed since the last run. It uses [Twitter API/OAuth](https://developer.twitter.com/en/docs/api-reference-index). You will need your own API tokens in order to run.
 
