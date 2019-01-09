@@ -23,7 +23,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'com.google.guava:guava:27.0.1-jre'
     compile 'org.slf4j:slf4j-api:1.7.25'
-    runtime 'ch.qos.logback:logback-core:1.0.13'
+    runtime 'ch.qos.logback:logback-core:1.2.3'
     runtime 'ch.qos.logback:logback-classic:1.2.3'
 }
 
