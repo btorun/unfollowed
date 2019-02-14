@@ -17,7 +17,7 @@ repositories {
 dependencies {
     compile 'org.twitter4j:twitter4j-core:4.0.7'
     compile 'com.amazonaws:aws-java-sdk-core:1.11.490'
-    compile 'com.amazonaws:aws-java-sdk-s3:1.11.490'
+    compile 'com.amazonaws:aws-java-sdk-s3:1.11.498'
     compile 'com.amazonaws:aws-lambda-java-core:1.2.0'
     compile 'com.google.inject:guice:4.2.2'
     compile 'com.google.code.gson:gson:2.8.5'
