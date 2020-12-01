@@ -1,7 +1,7 @@
 buildscript { repositories { jcenter() } }
 plugins {
     id 'java'
-    id 'nebula.lint' version '12.1.0'
+    id 'nebula.lint' version '16.15.9'
 }
 
 group 'com.baturalptorun.lambda'
