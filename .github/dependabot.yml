@@ -1,0 +1,21 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "10:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - btorun
+  assignees:
+  - btorun
+  ignore:
+  - dependency-name: com.amazonaws:aws-java-sdk-s3
+    versions:
+    - 1.11.930
+    - 1.11.946
+  - dependency-name: com.amazonaws:aws-java-sdk-core
+    versions:
+    - 1.11.930
+    - 1.11.946
